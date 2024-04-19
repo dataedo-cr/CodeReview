@@ -19,11 +19,11 @@ public displayBackground = false;
 repository = inject(ScriptRepositoryService);
 
 @ViewChild('code', { static: false })
-private codeEl: any;
+codeEl: any;
 
-public trimmedScript = '';
+trimmedScript = '';
 
-public setScript(data: string) {
+setScript(data: string) {
   var script = '';
   script = data.toUpperCase();
   script = script.trim();
@@ -31,7 +31,7 @@ public setScript(data: string) {
   this.trimmedScript = script.trim();
 }
 
-public getScript() {
+getScript() {
   return this.trimmedScript;
 }
 
