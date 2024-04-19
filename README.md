@@ -1,27 +1,18 @@
-# CodeReview
+# Purpose
+As a front-end developer at our company, you have been assigned to conduct a code review. Please focus specifically on the component outlined below.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
+# Task Description:
+We aim to develop a basic component that can highlight SQL queries. We plan to use highlight.js for this purpose. The component should:
 
-## Development server
+- Fetch SQL queries through an observable. Initially, this can be mocked to include a SQL query featuring common SQL keywords such as SELECT, INNER JOIN, FROM, UNION, WHERE.
+- Highlight these keywords.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Additionally, the component should:
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Support two different display styles:
+  - Background color:
+    - Default: rgba(231, 234, 243, 0.7)
+    - Optional: rgba(15, 61, 201, 0.7)
+  - Ensure that margins, padding, and border dimensions are consistent across both display styles.
+- Trim the fetched query.
+- Maintain the original character size without modification.

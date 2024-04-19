@@ -9,8 +9,17 @@ export class ScriptRepositoryService {
   constructor() { }
 
   public getScript() {
-    return of('SELECT [Name], [Age] FROM [People] WHERE [Age] > 18;')
-      // .pipe(delay(1000))
+    return of(`
+    SELECT supplier_id
+    FROM suppliers s
+    INNER JOIN orders o ON s.supplier_id = o.supplier_id
+    WHERE order_date > '2020-01-01'
+    UNION ALL
+    SELECT supplier_id
+    FROM suppliers s
+    INNER JOIN orders o ON s.supplier_id = o.supplier_id
+    WHERE order_date < '2020-01-01' AND product_category = 'Electronics';
+    `)
       .pipe(tap(() => console.log('Script loaded')));
   }
 }
