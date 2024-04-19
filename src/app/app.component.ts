@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CodeReview';
+  scriptExampleValue = 'SELECT [Name], [Age] FROM [People] WHERE [Age] > 18;';
 }

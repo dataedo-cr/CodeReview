@@ -1,0 +1,26 @@
+:host {
+    pre {
+        white-space: pre-wrap;
+        code {
+            padding: 0 !important;
+        }
+
+        &.background {
+          padding: 8px !important;
+          background-color: rgba(15, 61, 201, 0.7) !important;
+          border-radius: 4px;
+      }
+    }
+}
+
+.padding-sm {
+  padding: 8px !important;
+}
+
+::ng-deep .border {
+  background-color: rgba(231, 234, 243, 0.7);
+}
+
+::ng-deep .border-radius {
+  border-radius: 4px;
+}
